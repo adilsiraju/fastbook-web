@@ -2,6 +2,7 @@ project:
   type: website
 
 website:
+  favicon: assets/images/fai.png
   title: "FastAI Notebooks"
   description: "Easy-to-access FastAI course notebooks and experiments"
   site-url: https://adilsiraju.github.io/fastbook-web/
