@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.24">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>FastAI Course Notebooks – FastAI Notebooks</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-e31584831b205ffbb2d98406f31c2a5b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">FastAI Notebooks</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../posts/index.html" aria-current="page"> 
+<span class="menu-text">Notebooks</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/adilsiraju"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#course-notebooks" id="toc-course-notebooks" class="nav-link active" data-scroll-target="#course-notebooks">Course Notebooks</a>
+  <ul class="collapse">
+  <li><a href="#core-chapters-01-20" id="toc-core-chapters-01-20" class="nav-link" data-scroll-target="#core-chapters-01-20">Core Chapters (01-20)</a></li>
+  <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices">Appendices</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">FastAI Course Notebooks</h1>
+<p class="subtitle lead">Practical Deep Learning for Coders - Interactive Jupyter Notebooks</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="course-notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="course-notebooks">Course Notebooks</h2>
+<p>Below are all the FastAI course notebooks, organized and ready for exploration:</p>
+<section id="core-chapters-01-20" class="level3">
+<h3 class="anchored" data-anchor-id="core-chapters-01-20">Core Chapters (01-20)</h3>
+<ul>
+<li><strong>01-04</strong>: Foundations &amp; Image Classification</li>
+<li><strong>05-07</strong>: Multi-label &amp; Advanced Vision</li>
+<li><strong>08-09</strong>: Collaborative Filtering &amp; Tabular Data<br>
+</li>
+<li><strong>10-12</strong>: Natural Language Processing</li>
+<li><strong>13-17</strong>: Deep Learning Foundations</li>
+<li><strong>18-20</strong>: Advanced Topics &amp; Conclusion</li>
+</ul>
+</section>
+<section id="appendices" class="level3">
+<h3 class="anchored" data-anchor-id="appendices">Appendices</h3>
+<ul>
+<li><strong>app_blog</strong>: Jupyter to Blog Tutorial</li>
+<li><strong>app_jupyter</strong>: Jupyter Tips &amp; Tricks</li>
+</ul>
+
+
+
+</section>
+</section>
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+Title
+</th>
+
+<th>
+Description
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="33" data-listing-word-count-sort="6430" data-listing-title-sort="A Language Model from Scratch" data-listing-filename-sort="12_nlp_dive.ipynb">
+<td>
+<a href="../posts/12_nlp_dive.html" class="title listing-title">A Language Model from Scratch</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_nlp_dive]]</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="30" data-listing-word-count-sort="5889" data-listing-title-sort="A Neural Net from the Foundations" data-listing-filename-sort="17_foundations.ipynb">
+<td>
+<a href="../posts/17_foundations.html" class="title listing-title">A Neural Net from the Foundations</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_foundations]]</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="14" data-listing-word-count-sort="2676" data-listing-title-sort="A fastai Learner from Scratch" data-listing-filename-sort="19_learner.ipynb">
+<td>
+<a href="../posts/19_learner.html" class="title listing-title">A fastai Learner from Scratch</a>
+</td>
+<td>
+<span class="listing-description">This final chapter (other than the conclusion and the online chapters) is going to look a bit different. It contains far more code and far less prose than the previous…<chapter_foundations><code></code><code></code><code></code><code></code><code></code></chapter_foundations></span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1542" data-listing-title-sort="Appendix: Jupyter Notebook 101" data-listing-filename-sort="app_jupyter.ipynb">
+<td>
+<a href="../posts/app_jupyter.html" class="title listing-title">Appendix: Jupyter Notebook 101</a>
+</td>
+<td>
+<span class="listing-description">[appendix] [role=“Jupyter notebook 101”]</span>
+</td>
+
+</tr>
+
+<tr data-index="4" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="19" data-listing-word-count-sort="3688" data-listing-title-sort="Application Architectures Deep Dive" data-listing-filename-sort="15_arch_details.ipynb">
+<td>
+<a href="../posts/15_arch_details.html" class="title listing-title">Application Architectures Deep Dive</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_arch_details]]</span>
+</td>
+
+</tr>
+
+<tr data-index="5" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1513" data-listing-title-sort="CNN Interpretation with CAM" data-listing-filename-sort="18_CAM.ipynb">
+<td>
+<a href="../posts/18_CAM.html" class="title listing-title">CNN Interpretation with CAM</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_cam]]</span>
+</td>
+
+</tr>
+
+<tr data-index="6" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="31" data-listing-word-count-sort="6047" data-listing-title-sort="Collaborative Filtering Deep Dive" data-listing-filename-sort="08_collab.ipynb">
+<td>
+<a href="../posts/08_collab.html" class="title listing-title">Collaborative Filtering Deep Dive</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_collab]]</span>
+</td>
+
+</tr>
+
+<tr data-index="7" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="5" data-listing-word-count-sort="808" data-listing-title-sort="Concluding Thoughts" data-listing-filename-sort="20_conclusion.ipynb">
+<td>
+<a href="../posts/20_conclusion.html" class="title listing-title">Concluding Thoughts</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_conclusion]]</span>
+</td>
+
+</tr>
+
+<tr data-index="8" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="42" data-listing-word-count-sort="8371" data-listing-title-sort="Convolutional Neural Networks" data-listing-filename-sort="13_convolutions.ipynb">
+<td>
+<a href="../posts/13_convolutions.html" class="title listing-title">Convolutional Neural Networks</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_convolutions]]</span>
+</td>
+
+</tr>
+
+<tr data-index="9" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="11" data-listing-word-count-sort="2036" data-listing-title-sort="Creating a Blog" data-listing-filename-sort="app_blog.ipynb">
+<td>
+<a href="../posts/app_blog.html" class="title listing-title">Creating a Blog</a>
+</td>
+<td>
+<span class="listing-description">[[appendix_blog]] [appendix] [role=“Creating a blog”]</span>
+</td>
+
+</tr>
+
+<tr data-index="10" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="60" data-listing-word-count-sort="11843" data-listing-title-sort="Data Ethics" data-listing-filename-sort="03_ethics.ipynb">
+<td>
+<a href="../posts/03_ethics.html" class="title listing-title">Data Ethics</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_ethics]]</span>
+</td>
+
+</tr>
+
+<tr data-index="11" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="17" data-listing-word-count-sort="3348" data-listing-title-sort="Data Munging with fastai's Mid-Level API" data-listing-filename-sort="11_midlevel_data.ipynb">
+<td>
+<a href="../posts/11_midlevel_data.html" class="title listing-title">Data Munging with fastai’s Mid-Level API</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_midlevel_data]]</span>
+</td>
+
+</tr>
+
+<tr data-index="12" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="61" data-listing-word-count-sort="12045" data-listing-title-sort="From Model to Production" data-listing-filename-sort="02_production.ipynb">
+<td>
+<a href="../posts/02_production.html" class="title listing-title">From Model to Production</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_production]]</span>
+</td>
+
+</tr>
+
+<tr data-index="13" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="48" data-listing-word-count-sort="9579" data-listing-title-sort="Image Classification" data-listing-filename-sort="05_pet_breeds.ipynb">
+<td>
+<a href="../posts/05_pet_breeds.html" class="title listing-title">Image Classification</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_pet_breeds]]</span>
+</td>
+
+</tr>
+
+<tr data-index="14" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="35" data-listing-word-count-sort="6872" data-listing-title-sort="NLP Deep Dive: RNNs" data-listing-filename-sort="10_nlp.ipynb">
+<td>
+<a href="../posts/10_nlp.html" class="title listing-title">NLP Deep Dive: RNNs</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_nlp]]</span>
+</td>
+
+</tr>
+
+<tr data-index="15" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="24" data-listing-word-count-sort="4652" data-listing-title-sort="Other Computer Vision Problems" data-listing-filename-sort="06_multicat.ipynb">
+<td>
+<a href="../posts/06_multicat.html" class="title listing-title">Other Computer Vision Problems</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_multicat]]</span>
+</td>
+
+</tr>
+
+<tr data-index="16" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="24" data-listing-word-count-sort="4711" data-listing-title-sort="ResNets" data-listing-filename-sort="14_resnet.ipynb">
+<td>
+<a href="../posts/14_resnet.html" class="title listing-title">ResNets</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_resnet]]</span>
+</td>
+
+</tr>
+
+<tr data-index="17" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="68" data-listing-word-count-sort="13438" data-listing-title-sort="Tabular Modeling Deep Dive" data-listing-filename-sort="09_tabular.ipynb">
+<td>
+<a href="../posts/09_tabular.html" class="title listing-title">Tabular Modeling Deep Dive</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_tabular]]</span>
+</td>
+
+</tr>
+
+<tr data-index="18" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="26" data-listing-word-count-sort="5181" data-listing-title-sort="The Training Process" data-listing-filename-sort="16_accel_sgd.ipynb">
+<td>
+<a href="../posts/16_accel_sgd.html" class="title listing-title">The Training Process</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_accel_sgd]]</span>
+</td>
+
+</tr>
+
+<tr data-index="19" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="25" data-listing-word-count-sort="4821" data-listing-title-sort="Training a State-of-the-Art Model" data-listing-filename-sort="07_sizing_and_tta.ipynb">
+<td>
+<a href="../posts/07_sizing_and_tta.html" class="title listing-title">Training a State-of-the-Art Model</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_sizing_and_tta]]</span>
+</td>
+
+</tr>
+
+<tr data-index="20" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="72" data-listing-word-count-sort="14368" data-listing-title-sort="Under the Hood: Training a Digit Classifier" data-listing-filename-sort="04_mnist_basics.ipynb">
+<td>
+<a href="../posts/04_mnist_basics.html" class="title listing-title">Under the Hood: Training a Digit Classifier</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_mnist_basics]]</span>
+</td>
+
+</tr>
+
+<tr data-index="21" data-listing-file-modified-sort="1758679523716" data-listing-reading-time-sort="91" data-listing-word-count-sort="18015" data-listing-title-sort="Your Deep Learning Journey" data-listing-filename-sort="01_intro.ipynb">
+<td>
+<a href="../posts/01_intro.html" class="title listing-title">Your Deep Learning Journey</a>
+</td>
+<td>
+<span class="listing-description">[[chapter_intro]]</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
+<div class="listing-no-matching d-none">No matching items</div>
+</div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

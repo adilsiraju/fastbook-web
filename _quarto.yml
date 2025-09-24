@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "FastAI Notebooks"
+  description: "Easy-to-access FastAI course notebooks and experiments"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: posts/index.qmd
+        text: Notebooks
+    right:
+      - icon: github
+        href: https://github.com/adilsiraju
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-location: left
+    code-fold: true
+    code-summary: "Show code"
+
+
+

@@ -1,0 +1,27 @@
+---
+title: "FastAI Course Notebooks"
+subtitle: "Practical Deep Learning for Coders - Interactive Jupyter Notebooks"
+listing:
+  contents: "*.ipynb"
+  sort: "title"
+  type: table
+  fields: [title, description]
+  sort-ui: false
+  filter-ui: false
+---
+
+## Course Notebooks
+
+Below are all the FastAI course notebooks, organized and ready for exploration:
+
+### Core Chapters (01-20)
+- **01-04**: Foundations & Image Classification
+- **05-07**: Multi-label & Advanced Vision
+- **08-09**: Collaborative Filtering & Tabular Data  
+- **10-12**: Natural Language Processing
+- **13-17**: Deep Learning Foundations
+- **18-20**: Advanced Topics & Conclusion
+
+### Appendices
+- **app_blog**: Jupyter to Blog Tutorial
+- **app_jupyter**: Jupyter Tips & Tricks

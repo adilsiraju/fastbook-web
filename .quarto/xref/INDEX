@@ -1,0 +1,260 @@
+{
+  "index.qmd": {
+    "index.html": "13175357"
+  },
+  "about.qmd": {
+    "about.html": "518cd0a8"
+  },
+  "posts/post-with-code/index.qmd": {
+    "index.html": "418da08e"
+  },
+  "posts/welcome/index.qmd": {
+    "index.html": "97fc26d7"
+  },
+  "posts/index.qmd": {
+    "index.html": "2e1c9710"
+  },
+  "CHANGELOG.md": {
+    "CHANGELOG.html": "27ff3fb7"
+  },
+  "chapters/computer-vision/index.qmd": {
+    "index.html": "10305b7b"
+  },
+  "chapters/fastai/index.qmd": {
+    "index.html": "ff2e107e"
+  },
+  "chapters/index.qmd": {
+    "index.html": "e9c0cc02"
+  },
+  "chapters/mlops/index.qmd": {
+    "index.html": "cf94ac7e"
+  },
+  "chapters/python/index.qmd": {
+    "index.html": "fc83bef8"
+  },
+  "chapters/python/modules.ipynb": {
+    "modules.html": "7fff317f"
+  },
+  "CONTRIBUTING.md": {
+    "CONTRIBUTING.html": "f797fb42"
+  },
+  "chapters/pandas/data manipulation with loc and iloc.ipynb": {
+    "data manipulation with loc and iloc.html": "325e3ed0"
+  },
+  "chapters/pandas/index.qmd": {
+    "index.html": "1098e2aa"
+  },
+  "chapters/pandas/learn pandas df operations.ipynb": {
+    "learn pandas df operations.html": "e8a7d11e"
+  },
+  "chapters/pandas/learn pandas Df.ipynb": {
+    "learn pandas Df.html": "2df5a52b"
+  },
+  "chapters/pandas/learn pandas dfmissing data.ipynb": {
+    "learn pandas dfmissing data.html": "f43cf114"
+  },
+  "chapters/pandas/learn pandas Series.ipynb": {
+    "learn pandas Series.html": "98c59430"
+  },
+  "chapters/pandas/loadsata.ipynb": {
+    "loadsata.html": "a0fcc0f0"
+  },
+  "posts/computer-vision/index.qmd": {
+    "index.html": "bc3ed728"
+  },
+  "posts/fastai/index.qmd": {
+    "index.html": "a65b2812"
+  },
+  "posts/pandas/data manipulation with loc and iloc.ipynb": {
+    "data manipulation with loc and iloc.html": "399c7297"
+  },
+  "posts/pandas/index.qmd": {
+    "index.html": "a6847780"
+  },
+  "posts/pandas/learn pandas df operations.ipynb": {
+    "learn pandas df operations.html": "fcab6ff1"
+  },
+  "posts/pandas/learn pandas Df.ipynb": {
+    "learn pandas Df.html": "93839b2c"
+  },
+  "posts/pandas/learn pandas dfmissing data.ipynb": {
+    "learn pandas dfmissing data.html": "18bb6b10"
+  },
+  "posts/pandas/learn pandas Series.ipynb": {
+    "learn pandas Series.html": "18515152"
+  },
+  "posts/pandas/loadsata.ipynb": {
+    "loadsata.html": "50519bf8"
+  },
+  "posts/python/index.qmd": {
+    "index.html": "eeb06db9"
+  },
+  "posts/python/modules.ipynb": {
+    "modules.html": "8fb0d16f"
+  },
+  "posts/pandas/Advanced Data Manipulation.ipynb": {
+    "Advanced Data Manipulation.html": "a7e25876"
+  },
+  "posts/pandas/Agg Data using Functions.ipynb": {
+    "Agg Data using Functions.html": "483b7237"
+  },
+  "posts/pandas/Combine and Merge DF.ipynb": {
+    "Combine and Merge DF.html": "4934753d"
+  },
+  "posts/pandas/Data Cleaning.ipynb": {
+    "Data Cleaning.html": "3a603101"
+  },
+  "posts/pandas/Data Viz with panda tools.ipynb": {
+    "Data Viz with panda tools.html": "042cba3e"
+  },
+  "posts/pandas/Group By Operations.ipynb": {
+    "Group By Operations.html": "5be20773"
+  },
+  "posts/pandas/Handling Categorical Datas.ipynb": {
+    "Handling Categorical Datas.html": "0d5d2f5c"
+  },
+  "posts/pandas/Handling Temporal Datas.ipynb": {
+    "Handling Temporal Datas.html": "bf96b5e6"
+  },
+  "posts/pandas/Pandas Advance Techniques of Conditional Filtering and Queriying.ipynb": {
+    "Pandas Advance Techniques of Conditional Filtering and Queriying.html": "95a5c3d7"
+  },
+  "posts/pandas/Pandas-Dealing with missing Datas.ipynb": {
+    "Pandas-Dealing with missing Datas.html": "7d136be9"
+  },
+  "posts/pandas/text manipulation methods.ipynb": {
+    "text manipulation methods.html": "cae23a21"
+  },
+  "posts/pandas/Time Series Visualisation.ipynb": {
+    "Time Series Visualisation.html": "2184166d"
+  },
+  "posts/pandas/Working with multi index df.ipynb": {
+    "Working with multi index df.html": "257580b0"
+  },
+  "posts/01_intro.ipynb": {
+    "01_intro.html": "85510fd0"
+  },
+  "posts/02_production.ipynb": {
+    "02_production.html": "8e496484"
+  },
+  "posts/03_ethics.ipynb": {
+    "03_ethics.html": "1e0f7e21"
+  },
+  "posts/04_mnist_basics.ipynb": {
+    "04_mnist_basics.html": "562d362e"
+  },
+  "posts/05_pet_breeds.ipynb": {
+    "05_pet_breeds.html": "10d52019"
+  },
+  "posts/06_multicat.ipynb": {
+    "06_multicat.html": "aac303e8"
+  },
+  "posts/07_sizing_and_tta.ipynb": {
+    "07_sizing_and_tta.html": "0f5c56d2"
+  },
+  "posts/08_collab.ipynb": {
+    "08_collab.html": "6e42e8d3"
+  },
+  "posts/09_tabular.ipynb": {
+    "09_tabular.html": "e5b16d69"
+  },
+  "posts/10_nlp.ipynb": {
+    "10_nlp.html": "b2317a56"
+  },
+  "posts/11_midlevel_data.ipynb": {
+    "11_midlevel_data.html": "49965a20"
+  },
+  "posts/12_nlp_dive.ipynb": {
+    "12_nlp_dive.html": "daba2636"
+  },
+  "posts/13_convolutions.ipynb": {
+    "13_convolutions.html": "67abbc2f"
+  },
+  "posts/14_resnet.ipynb": {
+    "14_resnet.html": "2bfa20c9"
+  },
+  "posts/15_arch_details.ipynb": {
+    "15_arch_details.html": "d7c50988"
+  },
+  "posts/16_accel_sgd.ipynb": {
+    "16_accel_sgd.html": "6e659cad"
+  },
+  "posts/17_foundations.ipynb": {
+    "17_foundations.html": "24d45ad2"
+  },
+  "posts/18_CAM.ipynb": {
+    "18_CAM.html": "ad1543e0"
+  },
+  "posts/19_learner.ipynb": {
+    "19_learner.html": "ba1522ac"
+  },
+  "posts/20_conclusion.ipynb": {
+    "20_conclusion.html": "bae18c7a"
+  },
+  "posts/app_blog.ipynb": {
+    "app_blog.html": "f56928a1"
+  },
+  "posts/app_jupyter.ipynb": {
+    "app_jupyter.html": "cf0f64c4"
+  },
+  "posts/clean/01_intro.ipynb": {
+    "01_intro.html": "fe5ccc37"
+  },
+  "posts/clean/02_production.ipynb": {
+    "02_production.html": "8bc7cb4e"
+  },
+  "posts/clean/03_ethics.ipynb": {
+    "03_ethics.html": "d091893e"
+  },
+  "posts/clean/04_mnist_basics.ipynb": {
+    "04_mnist_basics.html": "f1e98a36"
+  },
+  "posts/clean/05_pet_breeds.ipynb": {
+    "05_pet_breeds.html": "9dc387a0"
+  },
+  "posts/clean/06_multicat.ipynb": {
+    "06_multicat.html": "6abe4ebe"
+  },
+  "posts/clean/07_sizing_and_tta.ipynb": {
+    "07_sizing_and_tta.html": "1c8dbd90"
+  },
+  "posts/clean/08_collab.ipynb": {
+    "08_collab.html": "f4d531bc"
+  },
+  "posts/clean/09_tabular.ipynb": {
+    "09_tabular.html": "ded9ac83"
+  },
+  "posts/clean/10_nlp.ipynb": {
+    "10_nlp.html": "ce97046f"
+  },
+  "posts/clean/11_midlevel_data.ipynb": {
+    "11_midlevel_data.html": "e92b541b"
+  },
+  "posts/clean/12_nlp_dive.ipynb": {
+    "12_nlp_dive.html": "c2eccc48"
+  },
+  "posts/clean/13_convolutions.ipynb": {
+    "13_convolutions.html": "38263334"
+  },
+  "posts/clean/14_resnet.ipynb": {
+    "14_resnet.html": "2c5ec7d9"
+  },
+  "posts/clean/15_arch_details.ipynb": {
+    "15_arch_details.html": "61e4fd41"
+  },
+  "posts/clean/16_accel_sgd.ipynb": {
+    "16_accel_sgd.html": "f909b958"
+  },
+  "posts/clean/17_foundations.ipynb": {
+    "17_foundations.html": "94a05e69"
+  },
+  "posts/clean/18_CAM.ipynb": {
+    "18_CAM.html": "416d9fed"
+  },
+  "posts/clean/19_learner.ipynb": {
+    "19_learner.html": "519fbd6a"
+  },
+  "posts/clean/20_conclusion.ipynb": {
+    "20_conclusion.html": "3636db96"
+  }
+}

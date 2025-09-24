@@ -1,0 +1,29 @@
+[
+  {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/12_nlp_dive.html",
+      "/posts/17_foundations.html",
+      "/posts/19_learner.html",
+      "/posts/app_jupyter.html",
+      "/posts/15_arch_details.html",
+      "/posts/18_CAM.html",
+      "/posts/08_collab.html",
+      "/posts/20_conclusion.html",
+      "/posts/13_convolutions.html",
+      "/posts/app_blog.html",
+      "/posts/03_ethics.html",
+      "/posts/11_midlevel_data.html",
+      "/posts/02_production.html",
+      "/posts/05_pet_breeds.html",
+      "/posts/10_nlp.html",
+      "/posts/06_multicat.html",
+      "/posts/14_resnet.html",
+      "/posts/09_tabular.html",
+      "/posts/16_accel_sgd.html",
+      "/posts/07_sizing_and_tta.html",
+      "/posts/04_mnist_basics.html",
+      "/posts/01_intro.html"
+    ]
+  }
+]
