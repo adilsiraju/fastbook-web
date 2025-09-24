@@ -3,8 +3,6 @@ title: "FastAI Notebooks Collection"
 subtitle: "Practical Deep Learning for Coders"
 ---
 
-# Welcome to FastAI Notebooks! 📚
-
 This is a clean, easy-to-navigate collection of the FastAI course notebooks - "Practical Deep Learning for Coders".
 
 ## Quick Start
@@ -23,47 +21,6 @@ This is a clean, easy-to-navigate collection of the FastAI course notebooks - "P
 **Plus helpful appendices** for Jupyter and blogging workflows.
 
 ---
-
-*Ready to dive in? Head to the [Notebooks](posts/index.qmd) section!* 🚀  
-
-<br>
-
----
-
-<br>
-
-::: {.text-center}
-*"The best way to learn is by doing, and the best way to remember is by documenting."*
-:::
-
-<br>
-
----
-
-<style>
-.latest-posts-grid .card {
-  border: 1px solid #dee2e6;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.latest-posts-grid .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15) !important;
-}
-
-.latest-posts-grid .card-title a {
-  color: inherit;
-  font-weight: 600;
-}
-
-.latest-posts-grid .card-title a:hover {
-  color: #0d6efd;
-}
-
-.latest-posts-grid .badge {
-  font-size: 0.75rem;
-}
-</style>
 
 ::: {.text-center}
 **Ready to dive in?** Head to the [**Notebooks**](posts/index.qmd) section! 🚀

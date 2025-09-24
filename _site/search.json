@@ -4,14 +4,14 @@
     "href": "posts/index.html",
     "title": "FastAI Course Notebooks",
     "section": "",
-    "text": "01 - Introduction\n02 - Production\n03 - Ethics\n04 - MNIST Basics\n05 - Pet Breeds\n06 - Multi-Category\n07 - Sizing and TTA\n08 - Collaborative Filtering\n09 - Tabular\n10 - NLP\n11 - Mid-level Data\n12 - NLP Dive\n13 - Convolutions\n14 - ResNet\n15 - Architecture Details\n16 - Accelerated SGD\n17 - Foundations\n18 - CAM\n19 - Learner\n20 - Conclusion"
+    "text": "Introduction\nProduction\nEthics\nMNIST Basics\nPet Breeds\nMulti-Category\nSizing and TTA\nCollaborative Filtering\nTabular\nNLP\nMid-level Data\nNLP Dive\nConvolutions\nResNet\nArchitecture Details\nAccelerated SGD\nFoundations\nCAM\nLearner\nConclusion"
   },
   {
     "objectID": "posts/index.html#chapters",
     "href": "posts/index.html#chapters",
     "title": "FastAI Course Notebooks",
     "section": "",
-    "text": "01 - Introduction\n02 - Production\n03 - Ethics\n04 - MNIST Basics\n05 - Pet Breeds\n06 - Multi-Category\n07 - Sizing and TTA\n08 - Collaborative Filtering\n09 - Tabular\n10 - NLP\n11 - Mid-level Data\n12 - NLP Dive\n13 - Convolutions\n14 - ResNet\n15 - Architecture Details\n16 - Accelerated SGD\n17 - Foundations\n18 - CAM\n19 - Learner\n20 - Conclusion"
+    "text": "Introduction\nProduction\nEthics\nMNIST Basics\nPet Breeds\nMulti-Category\nSizing and TTA\nCollaborative Filtering\nTabular\nNLP\nMid-level Data\nNLP Dive\nConvolutions\nResNet\nArchitecture Details\nAccelerated SGD\nFoundations\nCAM\nLearner\nConclusion"
   },
   {
     "objectID": "posts/index.html#appendices",
@@ -606,7 +606,7 @@
     "href": "index.html",
     "title": "FastAI Notebooks Collection",
     "section": "",
-    "text": "This is a clean, easy-to-navigate collection of the FastAI course notebooks - “Practical Deep Learning for Coders”.\n\n\n\nBrowse All Notebooks - Complete list of all course materials\nChapter 1: Introduction - Start your deep learning journey here\n\n\n\n\n20 Core Chapters covering: - Image classification and computer vision - Natural language processing - Tabular data and collaborative filtering\n- Deep learning foundations and advanced topics\nPlus helpful appendices for Jupyter and blogging workflows.\n\nReady to dive in? Head to the Notebooks section! 🚀\n\n\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”\n\n\n\n\n\nReady to dive in? Head to the Notebooks section! 🚀"
+    "text": "This is a clean, easy-to-navigate collection of the FastAI course notebooks - “Practical Deep Learning for Coders”.\n\n\n\nBrowse All Notebooks - Complete list of all course materials\nChapter 1: Introduction - Start your deep learning journey here\n\n\n\n\n20 Core Chapters covering: - Image classification and computer vision - Natural language processing - Tabular data and collaborative filtering\n- Deep learning foundations and advanced topics\nPlus helpful appendices for Jupyter and blogging workflows.\n\nReady to dive in? Head to the Notebooks section! 🚀\n\n\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”\n\n\n\n\nReady to dive in? Head to the Notebooks section! 🚀"
   },
   {
     "objectID": "index.html#quick-start",
@@ -620,7 +620,7 @@
     "href": "index.html#whats-inside",
     "title": "FastAI Notebooks Collection",
     "section": "",
-    "text": "20 Core Chapters covering: - Image classification and computer vision - Natural language processing - Tabular data and collaborative filtering\n- Deep learning foundations and advanced topics\nPlus helpful appendices for Jupyter and blogging workflows.\n\nReady to dive in? Head to the Notebooks section! 🚀\n\n\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”\n\n\n\n\n\nReady to dive in? Head to the Notebooks section! 🚀"
+    "text": "20 Core Chapters covering: - Image classification and computer vision - Natural language processing - Tabular data and collaborative filtering\n- Deep learning foundations and advanced topics\nPlus helpful appendices for Jupyter and blogging workflows.\n\nReady to dive in? Head to the Notebooks section! 🚀\n\n\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”\n\n\n\n\nReady to dive in? Head to the Notebooks section! 🚀"
   },
   {
     "objectID": "posts/02_production.html",
