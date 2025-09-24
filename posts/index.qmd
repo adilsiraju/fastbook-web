@@ -1,27 +1,32 @@
 ---
 title: "FastAI Course Notebooks"
-subtitle: "Practical Deep Learning for Coders - Interactive Jupyter Notebooks"
-listing:
-  contents: "*.ipynb"
-  sort: "title"
-  type: table
-  fields: [title, description]
-  sort-ui: false
-  filter-ui: false
+subtitle: "Practical Deep Learning for Coders"
 ---
 
-## Course Notebooks
+## Chapters
 
-Below are all the FastAI course notebooks, organized and ready for exploration:
+1. [01 - Introduction](01_intro.ipynb)
+2. [02 - Production](02_production.ipynb)
+3. [03 - Ethics](03_ethics.ipynb)
+4. [04 - MNIST Basics](04_mnist_basics.ipynb)
+5. [05 - Pet Breeds](05_pet_breeds.ipynb)
+6. [06 - Multi-Category](06_multicat.ipynb)
+7. [07 - Sizing and TTA](07_sizing_and_tta.ipynb)
+8. [08 - Collaborative Filtering](08_collab.ipynb)
+9. [09 - Tabular](09_tabular.ipynb)
+10. [10 - NLP](10_nlp.ipynb)
+11. [11 - Mid-level Data](11_midlevel_data.ipynb)
+12. [12 - NLP Dive](12_nlp_dive.ipynb)
+13. [13 - Convolutions](13_convolutions.ipynb)
+14. [14 - ResNet](14_resnet.ipynb)
+15. [15 - Architecture Details](15_arch_details.ipynb)
+16. [16 - Accelerated SGD](16_accel_sgd.ipynb)
+17. [17 - Foundations](17_foundations.ipynb)
+18. [18 - CAM](18_CAM.ipynb)
+19. [19 - Learner](19_learner.ipynb)
+20. [20 - Conclusion](20_conclusion.ipynb)
 
-### Core Chapters (01-20)
-- **01-04**: Foundations & Image Classification
-- **05-07**: Multi-label & Advanced Vision
-- **08-09**: Collaborative Filtering & Tabular Data  
-- **10-12**: Natural Language Processing
-- **13-17**: Deep Learning Foundations
-- **18-20**: Advanced Topics & Conclusion
+## Appendices
 
-### Appendices
-- **app_blog**: Jupyter to Blog Tutorial
-- **app_jupyter**: Jupyter Tips & Tricks
+- [A1 - App: Blog](app_blog.ipynb)
+- [A2 - App: Jupyter](app_jupyter.ipynb)
