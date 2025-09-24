@@ -606,21 +606,21 @@
     "href": "index.html",
     "title": "FastAI Notebooks Collection",
     "section": "",
-    "text": "This is a clean, easy-to-navigate collection of the FastAI course notebooks - “Practical Deep Learning for Coders”.\n\n\n\nBrowse All Notebooks - Complete list of all course materials\nChapter 1: Introduction - Start your deep learning journey here\n\n\n\n\n20 Core Chapters covering: - Image classification and computer vision - Natural language processing - Tabular data and collaborative filtering\n- Deep learning foundations and advanced topics\nPlus helpful appendices for Jupyter and blogging workflows.\n\nReady to dive in? Head to the Notebooks section! 🚀\n\n\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”\n\n\n\n\nReady to dive in? Head to the Notebooks section! 🚀"
+    "text": "This is a clean, easy-to-navigate collection of the FastAI course notebooks - “Practical Deep Learning for Coders”."
   },
   {
     "objectID": "index.html#quick-start",
     "href": "index.html#quick-start",
     "title": "FastAI Notebooks Collection",
-    "section": "",
-    "text": "Browse All Notebooks - Complete list of all course materials\nChapter 1: Introduction - Start your deep learning journey here"
+    "section": "Quick Start",
+    "text": "Quick Start\n\nBrowse All Notebooks - Complete list of all course materials\nChapter 1: Introduction - Start your deep learning journey here"
   },
   {
     "objectID": "index.html#whats-inside",
     "href": "index.html#whats-inside",
     "title": "FastAI Notebooks Collection",
-    "section": "",
-    "text": "20 Core Chapters covering: - Image classification and computer vision - Natural language processing - Tabular data and collaborative filtering\n- Deep learning foundations and advanced topics\nPlus helpful appendices for Jupyter and blogging workflows.\n\nReady to dive in? Head to the Notebooks section! 🚀\n\n\n\n\n“The best way to learn is by doing, and the best way to remember is by documenting.”\n\n\n\n\nReady to dive in? Head to the Notebooks section! 🚀"
+    "section": "What’s Inside",
+    "text": "What’s Inside\n20 Core Chapters covering: - Image classification and computer vision - Natural language processing - Tabular data and collaborative filtering\n- Deep learning foundations and advanced topics\nPlus helpful appendices for Jupyter and blogging workflows.\n\n\nReady to dive in? Head to the Notebooks section! 🚀"
   },
   {
     "objectID": "posts/02_production.html",
