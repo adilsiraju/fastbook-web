@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://adilsiraju.github.io/fastbook-web/posts/index.html</loc>
+    <lastmod>2025-09-24T02:21:01.224Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/fastbook-web/posts/01_intro.html</loc>
+    <lastmod>2025-09-24T02:26:34.236Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/fastbook-web/posts/03_ethics.html</loc>
+    <lastmod>2025-09-24T02:16:07.474Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/fastbook-web/index.html</loc>
+    <lastmod>2025-09-24T02:26:34.218Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/fastbook-web/posts/02_production.html</loc>
+    <lastmod>2025-09-24T02:26:34.269Z</lastmod>
+  </url>
+  <url>
+    <loc>https://adilsiraju.github.io/fastbook-web/posts/04_mnist_basics.html</loc>
+    <lastmod>2025-09-24T02:16:07.464Z</lastmod>
+  </url>
+</urlset>
