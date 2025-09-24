@@ -13,7 +13,7 @@ website:
         text: Notebooks
     right:
       - icon: github
-        href: https://github.com/adilsiraju
+        href: https://github.com/adilsiraju/fastbook-web
 
 format:
   html:
