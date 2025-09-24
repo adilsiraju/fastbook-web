@@ -102,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/adilsiraju"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/adilsiraju/fastbook-web"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -125,7 +125,6 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#quick-start" id="toc-quick-start" class="nav-link" data-scroll-target="#quick-start">Quick Start</a></li>
   <li><a href="#whats-inside" id="toc-whats-inside" class="nav-link" data-scroll-target="#whats-inside">What’s Inside</a></li>
-  <li><a href="#latest-posts" id="toc-latest-posts" class="nav-link" data-scroll-target="#latest-posts">Latest Posts 📝</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -173,8 +172,7 @@ ul.task-list li input[type="checkbox"] {
 - Deep learning foundations and advanced topics</p>
 <p><strong>Plus helpful appendices</strong> for Jupyter and blogging workflows.</p>
 <hr>
-<p><em>Ready to dive in? Head to the <a href="./posts/index.html">Notebooks</a> section!</em> 🚀<br>
-- <strong>MLOps Expertise</strong> - Docker, Kubernetes, automation</p>
+<p><em>Ready to dive in? Head to the <a href="./posts/index.html">Notebooks</a> section!</em> 🚀</p>
 <p><br></p>
 <hr>
 <p><br></p>
@@ -183,57 +181,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p><br></p>
 <hr>
-</section>
-<section id="latest-posts" class="level2">
-<h2 class="anchored" data-anchor-id="latest-posts">Latest Posts 📝</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<p><strong>Recent Blog Posts</strong> - Follow my AI/ML learning journey, technical insights, and project updates.</p>
-</div><div class="column" style="width:30%;">
-<div class="text-center">
-<p><a href="./posts/index.html" class="btn btn-primary"><strong>View All Posts →</strong></a></p>
-</div>
-</div>
-</div>
-<div class="latest-posts-grid">
-<div class="row">
-  <div class="col-md-6 mb-4">
-    <div class="card h-100 shadow-sm">
-      <div class="card-body">
-        <h5 class="card-title anchored">
-          <a href="posts/post-with-code/" class="text-decoration-none">FastAI Progress: Computer Vision Fundamentals</a>
-        </h5>
-        <p class="card-text text-muted">Building my first image classifier with FastAI and exploring transfer learning concepts.</p>
-        <div class="d-flex justify-content-between align-items-center">
-          <small class="text-muted">Sep 18, 2025</small>
-          <div>
-            <span class="badge bg-secondary me-1">fastai</span>
-            <span class="badge bg-secondary">computer-vision</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-md-6 mb-4">
-    <div class="card h-100 shadow-sm">
-      <div class="card-body">
-        <h5 class="card-title anchored">
-          <a href="posts/welcome/" class="text-decoration-none">Welcome to My AI/ML Learning Journey</a>
-        </h5>
-        <p class="card-text text-muted">Starting my documentation journey in AI and Machine Learning with goals and focus areas.</p>
-        <div class="d-flex justify-content-between align-items-center">
-          <small class="text-muted">Sep 15, 2025</small>
-          <div>
-            <span class="badge bg-secondary me-1">welcome</span>
-            <span class="badge bg-secondary">learning</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <style>
 .latest-posts-grid .card {
   border: 1px solid #dee2e6;
@@ -258,10 +205,6 @@ ul.task-list li input[type="checkbox"] {
   font-size: 0.75rem;
 }
 </style>
-</div>
-<p><br></p>
-<hr>
-<p><br></p>
 <div class="text-center">
 <p><strong>Ready to dive in?</strong> Head to the <a href="./posts/index.html"><strong>Notebooks</strong></a> section! 🚀</p>
 </div>
@@ -344,7 +287,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/adilsiraju\.github\.io\/fastbook-web\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

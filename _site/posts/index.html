@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -70,65 +68,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -162,7 +102,7 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/adilsiraju"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/adilsiraju/fastbook-web"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -181,11 +121,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-notebooks" id="toc-course-notebooks" class="nav-link active" data-scroll-target="#course-notebooks">Course Notebooks</a>
-  <ul class="collapse">
-  <li><a href="#core-chapters-01-20" id="toc-core-chapters-01-20" class="nav-link" data-scroll-target="#core-chapters-01-20">Core Chapters (01-20)</a></li>
+  <li><a href="#chapters" id="toc-chapters" class="nav-link active" data-scroll-target="#chapters">Chapters</a></li>
   <li><a href="#appendices" id="toc-appendices" class="nav-link" data-scroll-target="#appendices">Appendices</a></li>
-  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -199,7 +136,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">FastAI Course Notebooks</h1>
-<p class="subtitle lead">Practical Deep Learning for Coders - Interactive Jupyter Notebooks</p>
+<p class="subtitle lead">Practical Deep Learning for Coders</p>
 </div>
 
 
@@ -216,274 +153,42 @@ window.Quarto = {
 </header>
 
 
-<section id="course-notebooks" class="level2">
-<h2 class="anchored" data-anchor-id="course-notebooks">Course Notebooks</h2>
-<p>Below are all the FastAI course notebooks, organized and ready for exploration:</p>
-<section id="core-chapters-01-20" class="level3">
-<h3 class="anchored" data-anchor-id="core-chapters-01-20">Core Chapters (01-20)</h3>
+<section id="chapters" class="level2">
+<h2 class="anchored" data-anchor-id="chapters">Chapters</h2>
+<ol type="1">
+<li><a href="../posts/01_intro.html">01 - Introduction</a></li>
+<li><a href="../posts/02_production.html">02 - Production</a></li>
+<li><a href="../posts/03_ethics.html">03 - Ethics</a></li>
+<li><a href="../posts/04_mnist_basics.html">04 - MNIST Basics</a></li>
+<li><a href="../posts/05_pet_breeds.html">05 - Pet Breeds</a></li>
+<li><a href="../posts/06_multicat.html">06 - Multi-Category</a></li>
+<li><a href="../posts/07_sizing_and_tta.html">07 - Sizing and TTA</a></li>
+<li><a href="../posts/08_collab.html">08 - Collaborative Filtering</a></li>
+<li><a href="../posts/09_tabular.html">09 - Tabular</a></li>
+<li><a href="../posts/10_nlp.html">10 - NLP</a></li>
+<li><a href="../posts/11_midlevel_data.html">11 - Mid-level Data</a></li>
+<li><a href="../posts/12_nlp_dive.html">12 - NLP Dive</a></li>
+<li><a href="../posts/13_convolutions.html">13 - Convolutions</a></li>
+<li><a href="../posts/14_resnet.html">14 - ResNet</a></li>
+<li><a href="../posts/15_arch_details.html">15 - Architecture Details</a></li>
+<li><a href="../posts/16_accel_sgd.html">16 - Accelerated SGD</a></li>
+<li><a href="../posts/17_foundations.html">17 - Foundations</a></li>
+<li><a href="../posts/18_CAM.html">18 - CAM</a></li>
+<li><a href="../posts/19_learner.html">19 - Learner</a></li>
+<li><a href="../posts/20_conclusion.html">20 - Conclusion</a></li>
+</ol>
+</section>
+<section id="appendices" class="level2">
+<h2 class="anchored" data-anchor-id="appendices">Appendices</h2>
 <ul>
-<li><strong>01-04</strong>: Foundations &amp; Image Classification</li>
-<li><strong>05-07</strong>: Multi-label &amp; Advanced Vision</li>
-<li><strong>08-09</strong>: Collaborative Filtering &amp; Tabular Data<br>
-</li>
-<li><strong>10-12</strong>: Natural Language Processing</li>
-<li><strong>13-17</strong>: Deep Learning Foundations</li>
-<li><strong>18-20</strong>: Advanced Topics &amp; Conclusion</li>
-</ul>
-</section>
-<section id="appendices" class="level3">
-<h3 class="anchored" data-anchor-id="appendices">Appendices</h3>
-<ul>
-<li><strong>app_blog</strong>: Jupyter to Blog Tutorial</li>
-<li><strong>app_jupyter</strong>: Jupyter Tips &amp; Tricks</li>
+<li><a href="../posts/app_blog.html">A1 - App: Blog</a></li>
+<li><a href="../posts/app_jupyter.html">A2 - App: Jupyter</a></li>
 </ul>
 
 
-
-</section>
 </section>
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-
-<th>
-Title
-</th>
-
-<th>
-Description
-</th>
-
-</tr>
-</thead>
-<tbody class="list">
-
-<tr data-index="0" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="33" data-listing-word-count-sort="6430" data-listing-title-sort="A Language Model from Scratch" data-listing-filename-sort="12_nlp_dive.ipynb">
-<td>
-<a href="../posts/12_nlp_dive.html" class="title listing-title">A Language Model from Scratch</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_nlp_dive]]</span>
-</td>
-
-</tr>
-
-<tr data-index="1" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="30" data-listing-word-count-sort="5889" data-listing-title-sort="A Neural Net from the Foundations" data-listing-filename-sort="17_foundations.ipynb">
-<td>
-<a href="../posts/17_foundations.html" class="title listing-title">A Neural Net from the Foundations</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_foundations]]</span>
-</td>
-
-</tr>
-
-<tr data-index="2" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="14" data-listing-word-count-sort="2676" data-listing-title-sort="A fastai Learner from Scratch" data-listing-filename-sort="19_learner.ipynb">
-<td>
-<a href="../posts/19_learner.html" class="title listing-title">A fastai Learner from Scratch</a>
-</td>
-<td>
-<span class="listing-description">This final chapter (other than the conclusion and the online chapters) is going to look a bit different. It contains far more code and far less prose than the previous…<chapter_foundations><code></code><code></code><code></code><code></code><code></code></chapter_foundations></span>
-</td>
-
-</tr>
-
-<tr data-index="3" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1542" data-listing-title-sort="Appendix: Jupyter Notebook 101" data-listing-filename-sort="app_jupyter.ipynb">
-<td>
-<a href="../posts/app_jupyter.html" class="title listing-title">Appendix: Jupyter Notebook 101</a>
-</td>
-<td>
-<span class="listing-description">[appendix] [role=“Jupyter notebook 101”]</span>
-</td>
-
-</tr>
-
-<tr data-index="4" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="19" data-listing-word-count-sort="3688" data-listing-title-sort="Application Architectures Deep Dive" data-listing-filename-sort="15_arch_details.ipynb">
-<td>
-<a href="../posts/15_arch_details.html" class="title listing-title">Application Architectures Deep Dive</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_arch_details]]</span>
-</td>
-
-</tr>
-
-<tr data-index="5" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="8" data-listing-word-count-sort="1513" data-listing-title-sort="CNN Interpretation with CAM" data-listing-filename-sort="18_CAM.ipynb">
-<td>
-<a href="../posts/18_CAM.html" class="title listing-title">CNN Interpretation with CAM</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_cam]]</span>
-</td>
-
-</tr>
-
-<tr data-index="6" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="31" data-listing-word-count-sort="6047" data-listing-title-sort="Collaborative Filtering Deep Dive" data-listing-filename-sort="08_collab.ipynb">
-<td>
-<a href="../posts/08_collab.html" class="title listing-title">Collaborative Filtering Deep Dive</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_collab]]</span>
-</td>
-
-</tr>
-
-<tr data-index="7" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="5" data-listing-word-count-sort="808" data-listing-title-sort="Concluding Thoughts" data-listing-filename-sort="20_conclusion.ipynb">
-<td>
-<a href="../posts/20_conclusion.html" class="title listing-title">Concluding Thoughts</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_conclusion]]</span>
-</td>
-
-</tr>
-
-<tr data-index="8" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="42" data-listing-word-count-sort="8371" data-listing-title-sort="Convolutional Neural Networks" data-listing-filename-sort="13_convolutions.ipynb">
-<td>
-<a href="../posts/13_convolutions.html" class="title listing-title">Convolutional Neural Networks</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_convolutions]]</span>
-</td>
-
-</tr>
-
-<tr data-index="9" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="11" data-listing-word-count-sort="2036" data-listing-title-sort="Creating a Blog" data-listing-filename-sort="app_blog.ipynb">
-<td>
-<a href="../posts/app_blog.html" class="title listing-title">Creating a Blog</a>
-</td>
-<td>
-<span class="listing-description">[[appendix_blog]] [appendix] [role=“Creating a blog”]</span>
-</td>
-
-</tr>
-
-<tr data-index="10" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="60" data-listing-word-count-sort="11843" data-listing-title-sort="Data Ethics" data-listing-filename-sort="03_ethics.ipynb">
-<td>
-<a href="../posts/03_ethics.html" class="title listing-title">Data Ethics</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_ethics]]</span>
-</td>
-
-</tr>
-
-<tr data-index="11" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="17" data-listing-word-count-sort="3348" data-listing-title-sort="Data Munging with fastai's Mid-Level API" data-listing-filename-sort="11_midlevel_data.ipynb">
-<td>
-<a href="../posts/11_midlevel_data.html" class="title listing-title">Data Munging with fastai’s Mid-Level API</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_midlevel_data]]</span>
-</td>
-
-</tr>
-
-<tr data-index="12" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="61" data-listing-word-count-sort="12045" data-listing-title-sort="From Model to Production" data-listing-filename-sort="02_production.ipynb">
-<td>
-<a href="../posts/02_production.html" class="title listing-title">From Model to Production</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_production]]</span>
-</td>
-
-</tr>
-
-<tr data-index="13" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="48" data-listing-word-count-sort="9579" data-listing-title-sort="Image Classification" data-listing-filename-sort="05_pet_breeds.ipynb">
-<td>
-<a href="../posts/05_pet_breeds.html" class="title listing-title">Image Classification</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_pet_breeds]]</span>
-</td>
-
-</tr>
-
-<tr data-index="14" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="35" data-listing-word-count-sort="6872" data-listing-title-sort="NLP Deep Dive: RNNs" data-listing-filename-sort="10_nlp.ipynb">
-<td>
-<a href="../posts/10_nlp.html" class="title listing-title">NLP Deep Dive: RNNs</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_nlp]]</span>
-</td>
-
-</tr>
-
-<tr data-index="15" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="24" data-listing-word-count-sort="4652" data-listing-title-sort="Other Computer Vision Problems" data-listing-filename-sort="06_multicat.ipynb">
-<td>
-<a href="../posts/06_multicat.html" class="title listing-title">Other Computer Vision Problems</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_multicat]]</span>
-</td>
-
-</tr>
-
-<tr data-index="16" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="24" data-listing-word-count-sort="4711" data-listing-title-sort="ResNets" data-listing-filename-sort="14_resnet.ipynb">
-<td>
-<a href="../posts/14_resnet.html" class="title listing-title">ResNets</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_resnet]]</span>
-</td>
-
-</tr>
-
-<tr data-index="17" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="68" data-listing-word-count-sort="13438" data-listing-title-sort="Tabular Modeling Deep Dive" data-listing-filename-sort="09_tabular.ipynb">
-<td>
-<a href="../posts/09_tabular.html" class="title listing-title">Tabular Modeling Deep Dive</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_tabular]]</span>
-</td>
-
-</tr>
-
-<tr data-index="18" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="26" data-listing-word-count-sort="5181" data-listing-title-sort="The Training Process" data-listing-filename-sort="16_accel_sgd.ipynb">
-<td>
-<a href="../posts/16_accel_sgd.html" class="title listing-title">The Training Process</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_accel_sgd]]</span>
-</td>
-
-</tr>
-
-<tr data-index="19" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="25" data-listing-word-count-sort="4821" data-listing-title-sort="Training a State-of-the-Art Model" data-listing-filename-sort="07_sizing_and_tta.ipynb">
-<td>
-<a href="../posts/07_sizing_and_tta.html" class="title listing-title">Training a State-of-the-Art Model</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_sizing_and_tta]]</span>
-</td>
-
-</tr>
-
-<tr data-index="20" data-listing-file-modified-sort="1720393265000" data-listing-reading-time-sort="72" data-listing-word-count-sort="14368" data-listing-title-sort="Under the Hood: Training a Digit Classifier" data-listing-filename-sort="04_mnist_basics.ipynb">
-<td>
-<a href="../posts/04_mnist_basics.html" class="title listing-title">Under the Hood: Training a Digit Classifier</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_mnist_basics]]</span>
-</td>
-
-</tr>
-
-<tr data-index="21" data-listing-file-modified-sort="1758679523716" data-listing-reading-time-sort="91" data-listing-word-count-sort="18015" data-listing-title-sort="Your Deep Learning Journey" data-listing-filename-sort="01_intro.ipynb">
-<td>
-<a href="../posts/01_intro.html" class="title listing-title">Your Deep Learning Journey</a>
-</td>
-<td>
-<span class="listing-description">[[chapter_intro]]</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -557,7 +262,7 @@ Description
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/adilsiraju\.github\.io\/fastbook-web\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

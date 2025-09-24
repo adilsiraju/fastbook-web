@@ -25,7 +25,6 @@ This is a clean, easy-to-navigate collection of the FastAI course notebooks - "P
 ---
 
 *Ready to dive in? Head to the [Notebooks](posts/index.qmd) section!* 🚀  
-- **MLOps Expertise** - Docker, Kubernetes, automation
 
 <br>
 
@@ -65,14 +64,6 @@ This is a clean, easy-to-navigate collection of the FastAI course notebooks - "P
   font-size: 0.75rem;
 }
 </style>
-```
-:::
-
-<br>
-
----
-
-<br>
 
 ::: {.text-center}
 **Ready to dive in?** Head to the [**Notebooks**](posts/index.qmd) section! 🚀
